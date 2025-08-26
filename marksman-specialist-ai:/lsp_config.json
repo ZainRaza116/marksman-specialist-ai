@@ -1,0 +1,38 @@
+{
+  "marksman": {
+    "enabled": true,
+    "timeout": 30,
+    "retry_attempts": 3,
+    "features": {
+      "document_symbols": true,
+      "completion": true,
+      "hover": true,
+      "references": true,
+      "definition": true,
+      "code_actions": false
+    },
+    "initialization_options": {
+      "completion": {
+        "wiki": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "typescript_language_server_compatibility": {
+    "enabled": true,
+    "json_rpc_version": "2.0",
+    "message_format": "header_content_length"
+  },
+  "fallback_mode": {
+    "enabled": true,
+    "use_regex_parser": true,
+    "basic_symbol_extraction": true
+  },
+  "performance": {
+    "max_file_size_mb": 10,
+    "max_concurrent_requests": 5,
+    "cache_symbols": true,
+    "cache_timeout_minutes": 30
+  }
+}

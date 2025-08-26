@@ -1,0 +1,55 @@
+{
+  "custom_patterns": {
+    "annotations": {
+      "pattern": "<!--\\s*@(\\w+):\\s*(.*?)\\s*-->",
+      "description": "Custom annotation syntax",
+      "examples": ["<!-- @note: Important info -->", "<!-- @todo: Fix this -->"]
+    },
+    "project_tags": {
+      "pattern": "#(project|task|milestone|bug|feature)\\[(.*?)\\]",
+      "description": "Project management tags",
+      "examples": ["#project[web-app]", "#bug[critical]"]
+    },
+    "meeting_notes": {
+      "pattern": "##\\s+Meeting\\s+(\\d{4}-\\d{2}-\\d{2})",
+      "description": "Meeting date headers",
+      "examples": ["## Meeting 2025-08-07"]
+    },
+    "action_items": {
+      "pattern": "ACTION:\\s*(.+)",
+      "description": "Action items in meetings",
+      "examples": ["ACTION: Update documentation"]
+    },
+    "code_reviews": {
+      "pattern": "REVIEW:\\s*(.+)",
+      "description": "Code review comments",
+      "examples": ["REVIEW: Check error handling"]
+    },
+    "decisions": {
+      "pattern": "DECISION:\\s*(.+)",
+      "description": "Documented decisions",
+      "examples": ["DECISION: Use React for frontend"]
+    }
+  },
+  "file_type_patterns": {
+    "readme": {
+      "required_sections": ["Installation", "Usage", "License"],
+      "optional_sections": ["Contributing", "Changelog", "Examples"]
+    },
+    "api_docs": {
+      "required_sections": ["Endpoints", "Authentication", "Examples"],
+      "optional_sections": ["Rate Limiting", "SDKs"]
+    },
+    "user_guide": {
+      "required_sections": ["Getting Started", "Features"],
+      "optional_sections": ["Troubleshooting", "FAQ"]
+    }
+  },
+  "quality_checks": {
+    "min_word_count": 50,
+    "max_line_length": 120,
+    "required_metadata": ["title", "date"],
+    "broken_link_check": true,
+    "spelling_check": false
+  }
+}
